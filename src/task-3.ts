@@ -1,17 +1,10 @@
-const usernames: string[] = ["alice", "bob", "charlie"];
-
-const ratings: number[] = [4.5, 3.8, 5];
-
-interface Product {
-    id: number;
-    title: string;
+interface User {
+  readonly id: string;
+  name: string;
+  age: number;
+  active: boolean;
 }
 
-const products: Product[] = [
-  { id: 1, title: "Phone" },
-  { id: 2, title: "Laptop" },
-];
+const user: User = { id: "1", name: "Charlie", age: 25, active: true };
 
-console.log(`Usernames: ${JSON.stringify(usernames)}`);
-console.log(`Ratings: ${JSON.stringify(ratings)}`);
-console.log(`Products: ${JSON.stringify(products)}`);
+console.log(user);

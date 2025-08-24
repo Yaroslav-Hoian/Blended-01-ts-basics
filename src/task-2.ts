@@ -1,14 +1,10 @@
-interface Product {
-  readonly id: number;
-  title: string;
-  description?: string;
+interface ConCurr {
+  amount: number;
+  currency: "USD" | "EUR" | "UAH";
 }
 
+function convertCurrency({ amount, currency }: ConCurr): void {
+  console.log(`Converting ${amount} to ${currency}`);
+}
 
-const product: Product = {
-  id: 1,
-  title: "Tablet",
-  description: "Compact and fast",
-};
-
-console.log(`Product: ${JSON.stringify(product)}`);
+convertCurrency({ amount: 10, currency: "EUR" });
